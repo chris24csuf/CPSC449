@@ -46,7 +46,7 @@ Following these steps to start the services:
 4. Check tables in database if neccessary
 
 
-# Test micro services
+# Testing
 1. Open a terminal to install docker and docker compose
 2. Install Docker (steps from https://docs.docker.com/engine/install/ubuntu/)
 	- $ sudo apt-get update
