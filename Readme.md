@@ -59,10 +59,9 @@ Following these steps to start the services:
 	- $ sudo curl -L "https://github.com/docker/compose/releases/download/1.25.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 	- $ sudo chmod +x /usr/local/bin/docker-compose
 4. Locate docker-compose.yml in the project folder and open with a text editor. Under "volumes" for excess_test, basic_test, and bogus_neg_test enter the full path directory to where project files are located
-	- If the project folder was extracted on the TuffixVM's desktop, then by default the volumes are set to "/home/student/Desktop/cpsc449project1"
+	- Note: If the project folder was extracted on the TuffixVM's desktop, then by default the volumes are set to "/home/student/Desktop/cpsc449project1"
 5. Open a terminal and run the micro services
 6. Open another terminal and change directory to project folder
-	- $ cd /home/student/Desktop/cpsc449project1
 7. Test with no load
 	- $ sudo docker-compose up
 8. Test with load (TuffixVM might not be able to handle 100 containers at once; start with 10)
