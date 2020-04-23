@@ -3,7 +3,7 @@
 |        | Team           | Contact Info          	  			| Runbook Review        		|
 |--------|----------------|-------------------------------------|-------------------------------|
 |   1	 | Development      | kdang53@csu.fullerton.edu 			| Kiet Dang - 3/15/2020 		|
-|   2	 | Testing          | christian.angeles@csu.fullerton.edu | Christian Angeles - 3/28/2020 |
+|   2	 | Testing          | christian.angeles@csu.fullerton.edu | Christian Angeles - 4/23/2020 |
 |   3	 | Operations       | art2015@csu.fullerton.edu 	  | Arthur Salazar - 3/29/2020  		|
 
 
