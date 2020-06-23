@@ -126,7 +126,7 @@ $ sudo docker-compose down
 ```
 
 ## Deployment and Operations
-This was tested on Tuffix environment.
+This was tested on TuffixVM environment.
 
 #### Installation for foreman, Gunicorn3 and Caddy1
 1. Install Gunicorn3
