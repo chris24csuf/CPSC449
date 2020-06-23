@@ -76,50 +76,44 @@ $ sudo apt-get install sqlitebrowser
 4. Check tables in database if neccessary
 
 ## Testing
+Test micro services (TuffixVM 2019 Edition r2).
+
 1. Open a terminal to install docker and docker compose
 
-2. Install [Docker](https://docs.docker.com/engine/install/ubuntu/) on TuffixVM:
+2. Install [Docker](https://medium.com/@Grigorkh/how-to-install-docker-on-ubuntu-19-04-7ccfeda5935) on TuffixVM:
 ```
-& sudo apt-get update
-$ sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
 $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-$ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-$ sudo apt-get update
-$ sudo apt-get install docker-ce docker-ce-cli containerd.io
+$ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable edge test"
+$ sudo apt-get install docker-ce
 ```
 
-3. Install [Docker Compose](https://docs.docker.com/compose/install) on TuffixVM:
+3. Install [Docker Compose](https://www.osradar.com/how-to-install-latest-docker-compose-on-ubuntu-19-04-centos-8-debian-10-fedora-30/) on TuffixVM:
 ```
-$ sudo curl -L "https://github.com/docker/compose/releases/download/1.25.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-$ sudo chmod +x /usr/local/bin/docker-compose
+$ sudo curl -s https://api.github.com/repos/docker/compose/releases/latest | grep browser_download_url | grep docker-compose-Linux-x86_64 | cut -d '"' -f 4 | wget -qi -
+$ sudo chmod +x docker-compose-Linux-x86_64
+$ sudo mv docker-compose-Linux-x86_64 /usr/local/bin/docker-compose
 ```
 
-4. Locate docker-compose.yml in the project folder and open with a text editor.
-Under "volumes" for excess_test, basic_test, and bogus_neg_test enter the full path directory to where project files are located
- - Note: If the project folder was extracted on the TuffixVM's desktop, then by default the volumes are set to "/home/student/Desktop/cpsc449project1"
+4. Open a terminal in the project folder and run the micro services
 
-5. Open a terminal and run the micro services
-
-6. Open another terminal and change directory to project folder
-
-7. Test with no load:
+5. Open another terminal in the project folder and test with no load:
 ```
 $ sudo docker-compose up
 ```
 
-8. Test with load (TuffixVM might not be able to handle 100 containers at once; start with 10):
- - An example: --scale excess_test=<number of containers or "simulated users">
+6. Test with load (TuffixVM might not be able to handle 100 containers at once; start with 10):
 ```
 $ sudo docker-compose up --scale excess_test=10
 ```
+ - An example: --scale excess_test=<number of containers or "simulated users">
 
-9. Check docker compose logs:
+7. Check docker compose logs:
 ```
 $ sudo docker-compose logs basic_test
 $ sudo docker-compose logs bogus_neg_test
 ```
 
-10. Stop and remove running containers:
+8. Stop and remove running containers:
 ```
 $ sudo docker-compose down
 ```

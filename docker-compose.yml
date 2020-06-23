@@ -5,11 +5,9 @@ services:
     command: run excess_test.json --iteration-count 2 --delay-request 250 --globals postman_globals.json --silent
     network_mode: host
     # Mount directory for excess_test.json
-    # <local directory>:<docker container directory> for example...
-    # volumes:
-    #   - <enter full path here>:/etc/newman
+    # <local directory> : <docker container directory>
     volumes:
-      - /home/student/Desktop/cpsc449project1:/etc/newman
+      - ./:/etc/newman
 
   basic_test:
     image: postman/newman
@@ -19,7 +17,7 @@ services:
       - excess_test
     # Mount directory for basic_test.json
     volumes:
-      - /home/student/Desktop/cpsc449project1:/etc/newman
+      - ./:/etc/newman
 
   bogus_neg_test:
     image: postman/newman
@@ -29,4 +27,4 @@ services:
       - excess_test
     # Mount directory for neg_test.json
     volumes:
-      - /home/student/Desktop/cpsc449project1:/etc/newman
+      - ./:/etc/newman
