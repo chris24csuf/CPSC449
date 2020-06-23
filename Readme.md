@@ -7,7 +7,7 @@ Data models, partitioning and replication in relational and non-relational datab
 ## Table of Contents
 - [Overview](#overview)
 - [Group Members](#group-members)
-- [Development](#Development)
+- [Development](#development)
 - [Testing](#testing)
 - [Deployment and Operations](#deployment-and-operations)
 
