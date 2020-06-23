@@ -158,5 +158,5 @@ $ sudo foreman start -m posting=3,user=3,caddy=1
 ```
 
 3. Microservices will be access by:
- - http://localhost:2015/posts	(== http://localhost:5000)
- - http://localhost:2015/users	(== http://localhost:5000)
+ - http://localhost:2015/posts
+ - http://localhost:2015/users
