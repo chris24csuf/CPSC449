@@ -76,7 +76,6 @@ $ sudo apt-get install sqlitebrowser
 4. Check tables in database if neccessary
 
 ## Testing
-Test web services with postman/newman & docker-compose.
 1. Open a terminal to install docker and docker compose
 
 2. Install [Docker](https://docs.docker.com/engine/install/ubuntu/) on TuffixVM:
